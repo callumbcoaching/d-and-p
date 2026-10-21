@@ -90,6 +90,33 @@ a{color:inherit}
 .proofline{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:var(--sc-6);font-size:14px;color:#B8C4D2}
 .proofline img{height:30px;width:auto;background:#fff;border-radius:8px;padding:3px 6px}
 .proofline b{color:#fff;font-weight:600}
+a.proofline{text-decoration:none;width:max-content;max-width:100%;padding:8px 16px 8px 8px;gap:14px;border-radius:14px;font-size:15px;color:#DCE4EE;background:rgba(10,15,22,.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18),0 10px 30px -12px rgba(0,0,0,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background-color .16s var(--sc-ease-out),transform .16s var(--sc-ease-out)}
+a.proofline{flex-wrap:nowrap}
+a.proofline img{height:46px;padding:4px 8px;border-radius:10px}
+@media (max-width:700px){a.proofline{width:100%;font-size:13.5px;gap:10px;padding:7px 12px 7px 7px;line-height:1.35}a.proofline img{height:40px;padding:3px 6px}a.proofline b{font-size:16px}a.proofline .stars-mini{display:flex;margin:0 0 3px}a.proofline .stars-mini svg{width:12px;height:12px}}
+a.proofline b{font-size:18px}
+a.proofline:hover{background:rgba(10,15,22,.75)}
+a.proofline .stars-mini{display:inline-flex;gap:2px;color:#F2B53A;vertical-align:-2px;margin-right:6px}
+a.proofline .stars-mini svg{width:14px;height:14px}
+a.proofline:active{transform:scale(.98)}
+.ext{width:14px;height:14px;flex:none;opacity:.8}
+.wlink{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px;transition:text-decoration-color .16s var(--sc-ease-out),color .16s var(--sc-ease-out)}
+.wlink:hover{text-decoration-color:currentColor;color:#fff}
+.wlink .ext{display:inline;vertical-align:-1px;margin-left:3px;width:12px;height:12px}
+.rv{position:relative;transition:transform .2s var(--sc-ease-out),box-shadow .2s var(--sc-ease-out)}
+.rv__link{color:var(--blue);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+.rv__link::after{content:"";position:absolute;inset:0;border-radius:18px}
+.rv__link:focus-visible{outline:none}
+.rv:has(.rv__link:focus-visible){outline:3px solid var(--blue-soft);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){.rv:hover{transform:translateY(-4px);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 2px 4px rgba(3,10,25,.3),0 40px 70px -30px rgba(3,10,25,.9)}}
+.rv:active{transform:scale(.99)}
+a.which-line{text-decoration:none;width:max-content;padding:8px 14px 8px 8px;margin-left:-8px;border-radius:12px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);transition:background-color .16s var(--sc-ease-out),transform .16s var(--sc-ease-out)}
+a.which-line:hover{background:rgba(255,255,255,.12)}
+a.which-line:active{transform:scale(.98)}
+a.big{text-decoration:none;display:inline-block;transition:opacity .16s var(--sc-ease-out)}
+a.big:hover{opacity:.85}
+.close .wlink{text-decoration-color:rgba(22,17,10,.35)}
+.close .wlink:hover{color:#16110A}
 
 /* ---------- 2 the leak: pinned words ---------- */
 .leak{background:#0C121A}
@@ -244,6 +271,7 @@ a{color:inherit}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3 .78.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.25-.12-1.46-.72-1.7-.8-.22-.08-.38-.12-.55.12-.16.25-.63.8-.77.96-.14.17-.28.19-.53.06a6.7 6.7 0 0 1-3.3-2.9c-.25-.43.25-.4.71-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.7 2.7 0 0 0-.85 2.02 4.7 4.7 0 0 0 1 2.5c.12.16 1.7 2.6 4.14 3.65 1.54.66 2.14.72 2.9.6.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.070.14-1.17-.06-.1-.22-.16-.47-.28z"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
@@ -290,7 +318,7 @@ a{color:inherit}
         <a class="btn btn--red" href="#quote">Get a free quote</a>
         <a class="btn btn--light" href="https://wa.me/447587415299?text=Hi%20Dale%2C%20I%20found%20you%20online.%20I%27m%20after%20a%20quote%20for%3A%20" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
       </div>
-      <p class="proofline"><img src="brand_assets/badge-which.png" alt="Which? Trusted Trader" width="711" height="562"><span><b>5.0</b> from 142 reviews on Which? Trusted Trader</span></p>
+      <a class="proofline" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener" aria-label="Rated 5.0 from 142 reviews on Which? Trusted Trader. Read them on Which?, opens in a new tab"><img src="brand_assets/badge-which.png" alt="" width="711" height="562"><span><span class="stars-mini" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>5.0</b> from 142 reviews on Which?</span><svg class="ext" aria-hidden="true"><use href="#i-ext"/></svg></a>
     </div>
   </div>
 </section>
@@ -302,11 +330,11 @@ a{color:inherit}
     <div class="drip" aria-hidden="true"></div>
     <blockquote data-sc-cue="0 0.27 0 0.18">
       <p>"A previous roofer told us they had fixed the issue but the leak returned."</p>
-      <cite>Customer in Greater Manchester, on Which?</cite>
+      <cite>Customer in Greater Manchester, on <a class="wlink" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener">Which?<svg class="ext" aria-hidden="true"><use href="#i-ext"/></svg></a></cite>
     </blockquote>
     <blockquote data-sc-cue="0.27 0.52 0.18 0.18">
       <p>"We had no idea the actual state of the roof."</p>
-      <cite>Customer in Greater Manchester, on Which?</cite>
+      <cite>Customer in Greater Manchester, on <a class="wlink" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener">Which?<svg class="ext" aria-hidden="true"><use href="#i-ext"/></svg></a></cite>
     </blockquote>
     <blockquote data-sc-cue="0.52 0.76 0.18 0.18">
       <p>"After many hours wasted by 'roofers' letting me down, I was at the end of my tether."</p>
@@ -357,27 +385,27 @@ a{color:inherit}
   <div data-sc-stage>
     <div class="rail" data-sc-pan="0.04">
       <div class="rail__lead">
-        <span class="big">142</span>
+        <a class="big" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener" aria-label="142 reviews on Which?, opens in a new tab">142</a>
         <h2 class="sc-display">reviews. Every one says the same thing.</h2>
         <p>Independent, checked reviews on Which? Trusted Trader. Customer service, quality and value all score 5.0, and 99% of customers recommend us.</p>
-        <p class="which-line"><img src="brand_assets/badge-which.png" alt="" width="711" height="562">Which? Trusted Trader · 5.0</p>
+        <a class="which-line" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener"><img src="brand_assets/badge-which.png" alt="" width="711" height="562">Read all 142 on Which? Trusted Trader<svg class="ext" aria-hidden="true"><use href="#i-ext"/></svg></a>
       </div>
       <article class="rv" style="--i:0"><span class="stars" aria-label="Recommended"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
         <h3>Highly Recommended</h3>
         <p>"Dale the manager was very clear with the times and what works needed to be done, he didn't mess me around or lie about the works or what times they would come which unfortunately happens with some workmen (i am one). ... The price i paid for the works was very reasonable and not a rip off."</p>
-        <footer><span>Customer in Greater Manchester</span><span>Which? · Jul 2026</span></footer></article>
+        <footer><span>Customer in Greater Manchester</span><a class="rv__link" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener" aria-label="Read this review and 141 more on Which?, opens in a new tab">Read on Which? · Jul 2026<svg class="ext" aria-hidden="true"><use href="#i-ext"/></svg></a></footer></article>
       <article class="rv" style="--i:1"><span class="stars" aria-label="Recommended"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
         <h3>Great Service</h3>
         <p>"A previous roofer told us they had fixed the issue but the leak returned so I contacted D&P roofing. From the start it was clear they were knowledgeable and gave me a couple of options to consider. ... The work itself is fantastic. Paul and the lads worked really hard over two days and it looks great!"</p>
-        <footer><span>Customer in Greater Manchester</span><span>Which? · May 2026</span></footer></article>
+        <footer><span>Customer in Greater Manchester</span><a class="rv__link" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener" aria-label="Read this review and 141 more on Which?, opens in a new tab">Read on Which? · May 2026<svg class="ext" aria-hidden="true"><use href="#i-ext"/></svg></a></footer></article>
       <article class="rv" style="--i:2"><span class="stars" aria-label="Recommended"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
         <h3>Great work and service</h3>
         <p>"A competitively quoted full roof replacement with good detail provided. Quality materials utilised throughout. ... They were punctual and worked well as a team, clearing up nicely each day. ... Thanks Dale, Chrissy and the lads."</p>
-        <footer><span>Customer in Greater Manchester</span><span>Which? · May 2026</span></footer></article>
+        <footer><span>Customer in Greater Manchester</span><a class="rv__link" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener" aria-label="Read this review and 141 more on Which?, opens in a new tab">Read on Which? · May 2026<svg class="ext" aria-hidden="true"><use href="#i-ext"/></svg></a></footer></article>
       <article class="rv" style="--i:3"><span class="stars" aria-label="Recommended"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
         <h3>Realistically, would be a 10 Star Review</h3>
         <p>"D&P Roofing could not have been more helpful, and more importantly, fair. They did not increase the roofing quote ... I would gladly use them again, and highly recommend them without a moment's hesitation."</p>
-        <footer><span>Customer in Greater Manchester</span><span>Which? · Jun 2026</span></footer></article>
+        <footer><span>Customer in Greater Manchester</span><a class="rv__link" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener" aria-label="Read this review and 141 more on Which?, opens in a new tab">Read on Which? · Jun 2026<svg class="ext" aria-hidden="true"><use href="#i-ext"/></svg></a></footer></article>
       <div class="rail__end">
         <p>That's four of 142. Read every one, word for word, on Which?</p>
         <a class="btn btn--light" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener"><svg style="color:var(--sc-accent)"><use href="#i-which"/></svg>All 142 reviews on Which?</a>
@@ -480,7 +508,7 @@ a{color:inherit}
     <div class="close__glow" aria-hidden="true"></div>
     <div class="close__inner">
       <h2 class="sc-display" data-sc-cue="0 1 0 0">Dry, and guaranteed.</h2>
-      <p class="sub" data-sc-cue="0 1 0 0">Thirty years, 142 five-star reviews, and the price you were quoted.</p>
+      <p class="sub" data-sc-cue="0 1 0 0">Thirty years, <a class="wlink" href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener">142 five-star reviews on Which?<svg class="ext" aria-hidden="true"><use href="#i-ext"/></svg></a>, and the price you were quoted.</p>
       <div class="ctas" data-sc-cue="0 1 0 0">
         <a class="btn btn--red" href="#quote">Get a free quote</a>
         <a class="btn btn--ghost" href="tel:+447587415299"><svg><use href="#i-phone"/></svg>07587 415299</a>
