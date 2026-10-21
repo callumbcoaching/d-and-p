@@ -272,6 +272,15 @@ a.big:hover{opacity:.85}
 .work .tall{grid-row:span 2}.work .wide{grid-column:span 2}
 @media (hover:hover) and (pointer:fine){.work figure:hover img{transform:scale(1.05)}}
 @media (max-width:900px){.work{grid-template-columns:1fr 1fr;grid-auto-rows:170px}}
+.follow{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--sc-6)}
+.soc{display:inline-flex;align-items:center;gap:12px;padding:12px 20px 12px 14px;border-radius:14px;text-decoration:none;color:#fff;font-weight:600;font-size:15px;line-height:1.25;
+  box-shadow:0 1px 2px rgba(20,15,5,.18),0 12px 28px -14px rgba(20,15,5,.5);transition:transform .16s var(--sc-ease-out),box-shadow .16s var(--sc-ease-out),filter .16s var(--sc-ease-out)}
+.soc svg{width:26px;height:26px;flex:none}
+.soc small{display:block;font-weight:400;font-size:12.5px;opacity:.85}
+.soc--ig{background:linear-gradient(135deg,#6E3BB5,#C1356E 55%,#E8833A)}
+.soc--fb{background:#1877F2}
+.soc:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.soc:active{transform:translateY(1px) scale(.98)}
 .areas{font-family:var(--sc-font-display);font-weight:600;font-stretch:104%;font-size:clamp(1.25rem,2.2vw,1.75rem);line-height:1.45;letter-spacing:-.01em;color:var(--ink-dark-soft);max-width:60rem;margin-top:var(--sc-6)}
 .areas strong{color:var(--ink-dark);font-weight:800}
 .faq{max-width:52rem;margin-top:var(--sc-6)}
@@ -316,8 +325,9 @@ a.big:hover{opacity:.85}
 .foot a{text-decoration:none;transition:color .16s var(--sc-ease-out)}
 .foot a:hover{color:var(--blue)}
 .socials{display:flex;gap:8px}
-.socials a{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:#fff;color:#16110A;box-shadow:0 1px 2px rgba(40,30,15,.15);transition:transform .16s var(--sc-ease-out),background-color .16s var(--sc-ease-out)}
-.socials a svg{width:19px;height:19px}
+.socials{flex-wrap:wrap}
+.socials a{height:42px;padding:0 14px;gap:8px;font-size:14px;font-weight:600;color:#16110A;text-decoration:none;border-radius:10px;display:inline-flex;align-items:center;background:#fff;color:#16110A;box-shadow:0 1px 2px rgba(40,30,15,.15);transition:transform .16s var(--sc-ease-out),background-color .16s var(--sc-ease-out)}
+.socials a svg{width:19px;height:19px;flex:none}
 .socials a:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}
 .socials a:active{transform:scale(.95)}
 @media (max-width:860px){
@@ -511,6 +521,7 @@ a.big:hover{opacity:.85}
   <section class="sc-section" id="work" style="padding-top:0">
     <div class="sc-wrap">
       <h2 data-sc-in>Recent jobs, straight off our Facebook and Instagram.</h2>
+      <div class="follow" data-sc-in><a class="soc soc--ig" href="https://www.instagram.com/dandp_roofing_and_buildingltd/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg><span>Follow on Instagram<small>731 posts of our jobs</small></span></a><a class="soc soc--fb" href="https://www.facebook.com/Dandproofingandbuilding/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg><span>Follow on Facebook<small>887 followers, 100% recommend</small></span></a></div>
       <div class="work" data-sc-in data-sc-stagger="40">
         <figure class="tall"><img src="brand_assets/fb-reroof-grey-sky-2.jpg" alt="New tile roof and ridge" loading="lazy"><figcaption>Full re-roof and roofline</figcaption></figure>
         <figure class="wide"><img src="brand_assets/ig/terrace-reroof-aerial-sep26.jpg" alt="Terrace re-roof seen from the scaffold" loading="lazy"><figcaption>Terrace re-roof, September 2026</figcaption></figure>
@@ -570,6 +581,8 @@ a.big:hover{opacity:.85}
           <a href="tel:+447587415299"><svg><use href="#i-phone"/></svg><span>07587 415299<small>Tap to call</small></span></a>
           <a href="https://wa.me/447587415299" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span>WhatsApp<small>Send photos of the job</small></span></a>
           <a href="mailto:info@dandproofingandbuilding.co.uk"><svg><use href="#i-mail"/></svg><span>info@dandproofingandbuilding.co.uk<small>Email us</small></span></a>
+          <a href="https://www.instagram.com/dandp_roofing_and_buildingltd/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg><span>Instagram<small>@dandp_roofing_and_buildingltd</small></span></a>
+          <a href="https://www.facebook.com/Dandproofingandbuilding/" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg><span>Facebook<small>D & P Roofing and Building ltd</small></span></a>
           <div><svg><use href="#i-clock"/></svg><span>Mon to Fri 8am to 6pm<small>Sat and Sun 10am to 4pm</small></span></div>
           <div><svg><use href="#i-pin"/></svg><span>182 Park Road, Westhoughton<small>Bolton, BL5 3HB</small></span></div>
         </div>
@@ -594,10 +607,10 @@ a.big:hover{opacity:.85}
     <footer class="foot">
       <span>D & P Roofing and Building Ltd · 182 Park Road, Westhoughton, Bolton, BL5 3HB · <a href="mailto:info@dandproofingandbuilding.co.uk">info@dandproofingandbuilding.co.uk</a> · Proud sponsors of Langworth Reds</span>
       <span class="socials">
-        <a href="https://www.facebook.com/Dandproofingandbuilding/" target="_blank" rel="noopener" aria-label="D & P on Facebook"><svg><use href="#i-fb"/></svg></a>
-        <a href="https://www.instagram.com/dandp_roofing_and_buildingltd/" target="_blank" rel="noopener" aria-label="D & P on Instagram"><svg><use href="#i-ig"/></svg></a>
-        <a href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener" aria-label="D & P on Which? Trusted Trader"><svg><use href="#i-which"/></svg></a>
-        <a href="https://wa.me/447587415299" target="_blank" rel="noopener" aria-label="WhatsApp D & P"><svg><use href="#i-wa"/></svg></a>
+        <a href="https://www.facebook.com/Dandproofingandbuilding/" target="_blank" rel="noopener" aria-label="D & P on Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a>
+        <a href="https://www.instagram.com/dandp_roofing_and_buildingltd/" target="_blank" rel="noopener" aria-label="D & P on Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a>
+        <a href="https://trustedtraders.which.co.uk/businesses/d-p-roofing-building-ltd/" target="_blank" rel="noopener" aria-label="D & P on Which? Trusted Trader"><svg aria-hidden="true"><use href="#i-which"/></svg>Which?</a>
+        <a href="https://wa.me/447587415299" target="_blank" rel="noopener" aria-label="WhatsApp D & P"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
       </span>
       <span>Concept demo by Clockwork AI. Not the official website.</span>
     </footer>
